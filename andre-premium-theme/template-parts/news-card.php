@@ -1,0 +1,1 @@
+<article class="card"><a href="<?php the_permalink(); ?>"><?php if(has_post_thumbnail()) the_post_thumbnail('medium'); ?><h3><?php the_title(); ?></h3><small><?php echo esc_html(get_the_date()); ?></small><p><?php echo esc_html(get_the_excerpt()); ?></p><span>Leia mais</span></a></article>

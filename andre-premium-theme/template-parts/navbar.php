@@ -1,0 +1,1 @@
+<?php $opts=get_option('apc_settings',[]); ?><header class="navbar"><div class="brand"><?php if(!empty($opts['logo_principal'])){echo wp_get_attachment_image((int)$opts['logo_principal'],'medium');} else {echo '<strong>André do Premium</strong>';} ?></div><button class="menu-toggle">☰</button><nav class="menu"><?php wp_nav_menu(['theme_location'=>'primary']); ?></nav></header>
