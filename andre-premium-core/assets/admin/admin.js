@@ -1,0 +1,1 @@
+jQuery(function($){$(document).on('click','.apc-media-upload',function(e){e.preventDefault();const target=$(this).data('target');const frame=wp.media({title:'Selecionar mídia',button:{text:'Usar mídia'},multiple:false});frame.on('select',function(){const a=frame.state().get('selection').first().toJSON();$('input[name="apc_settings['+target+']"]').val(a.id);});frame.open();});});
