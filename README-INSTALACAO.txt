@@ -1,30 +1,47 @@
-INSTALAÇÃO - ANDRÉ PREMIUM
-1) Copie as pastas andre-premium-core e andre-premium-theme para wp-content/plugins e wp-content/themes.
-2) Ative o plugin André Premium Core.
-3) Ative o tema André Premium Theme.
-4) Vá em Configurações > Links Permanentes e salve.
-5) Configure tudo em menu André Premium.
+INSTALAÇÃO DO TEMA ANDRÉ PREMIUM (CLÁSSICO)
 
-ONDE EDITAR
-- Configurações Gerais: nome, subtítulo, hero e seções.
-- Identidade Visual + Mídias do Site: logo, favicon, imagens padrão.
-- Configurações do Topo: links da barra superior.
-- Redes Sociais: Instagram, Facebook, YouTube, WhatsApp, TikTok.
-- SEO e Compartilhamento: OG/Twitter.
-- Contatos e Rodapé: dados institucionais.
+1) Estrutura correta para compactar (sem pasta duplicada):
+andre-premium-theme/
+  style.css
+  index.php
+  functions.php
+  header.php
+  footer.php
+  ...
 
-CADASTROS
-- Notícias: Posts nativos.
-- Ações/Projetos: CPT Ações e Projetos.
-- Emendas: CPT Emendas.
-- Galerias: CPT Galerias (usar campo IDs de imagens).
+2) No seu computador, compacte APENAS a pasta `andre-premium-theme`.
+   - Exemplo correto de ZIP:
+     andre-premium-theme.zip
+       └── andre-premium-theme/
+           ├── style.css
+           ├── index.php
+           ├── functions.php
 
-SHORTCODES
-[andre_acoes_projetos]
-[andre_emendas]
-[andre_emendas_resumo]
-[andre_galerias]
-[andre_galeria id="123"]
-[andre_instagram]
-[andre_redes_sociais]
-[andre_contato]
+3) No WordPress:
+   - Aparência → Temas → Adicionar novo → Enviar tema
+   - Selecione `andre-premium-theme.zip`
+   - Clique em Instalar e depois Ativar
+
+4) Configuração inicial recomendada:
+   - Aparência → Menus:
+     * atribuir "Menu Principal" à localização `primary`
+     * atribuir "Menu Superior" à localização `topbar`
+     * atribuir "Menu Rodapé" à localização `footer`
+
+5) Logo do site:
+   - Aparência → Personalizar → Identidade do site → Logo
+
+6) Homepage:
+   - Páginas → criar página "Início"
+   - Configurações → Leitura → "Uma página estática"
+   - Definir "Página inicial" como "Início"
+
+7) Plugin institucional (opcional, recomendado):
+   - Enviar/ativar o plugin `andre-premium-core`
+   - Configurar em "André Premium" no painel
+
+8) Compatibilidade:
+   - Tema clássico (não depende de index.html/FSE)
+   - WordPress 6+
+   - PHP 8+
+   - Compatível com Gutenberg e Elementor
